@@ -20,7 +20,7 @@ public class MapsUnlock : MonoBehaviour
         {
             bermudian.interactable = true;
         }
-        else if (PlayerPrefs.GetInt("mapPieces" + 2) >= 16)
+        if (PlayerPrefs.GetInt("mapPieces" + 2) >= 16)
         {
             mexican.interactable = true;
         }
