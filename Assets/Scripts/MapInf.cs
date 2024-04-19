@@ -11,7 +11,7 @@ public class MapInf : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        for(int i = 0; i<piecesText.Length; i++)
+        for(int i = 0; i < piecesText.Length; i++)
         {
             if (piecesText[i].text != null)
             {

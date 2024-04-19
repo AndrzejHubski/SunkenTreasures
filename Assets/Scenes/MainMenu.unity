@@ -1587,7 +1587,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainPanel: {fileID: 1996099374}
-  welcomePanel: {fileID: 1253864054}
+  welcomePanel: {fileID: 1996099374}
   defaultAnimation: 0
   defaultEase: 0
   _animationIsPlaying: 0
@@ -1619,7 +1619,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 0}
-  countdownTimer: {fileID: 0}
+  countdownTimer: {fileID: 217095927}
 --- !u!114 &217095926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1648,7 +1648,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timerText: {fileID: 690769224}
   timer: 
-  bonusReady: 0
+  bonusReady: 1
 --- !u!1 &255029909
 GameObject:
   m_ObjectHideFlags: 0

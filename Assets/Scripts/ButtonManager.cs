@@ -43,6 +43,7 @@ public class ButtonManager : MonoBehaviour
                 }
             }
             countdownTimer.bonusReady = false;
+            PlayerPrefs.SetInt("bonusReady", 1);
             countdownTimer.ResetTimer();
         }
     }

@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
         if(mapId == 0)
         {
             mapId = 1;
+            PlayerPrefs.SetInt("mapId", 1);
         }
     }
 

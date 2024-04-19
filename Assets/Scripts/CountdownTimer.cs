@@ -17,7 +17,19 @@ public class CountdownTimer : MonoBehaviour
 
     void Start()
     {
-        LoadTimer();
+        if(PlayerPrefs.GetInt("bonusReady") == 2)
+        {
+            bonusReady = true;
+        }
+        else if(PlayerPrefs.GetInt("bonusReady") == 1)
+        {
+            bonusReady = false;
+        }
+
+        if(bonusReady == false)
+        {
+            LoadTimer();
+        }
     }
 
     void Update()
@@ -25,7 +37,7 @@ public class CountdownTimer : MonoBehaviour
         
         remainingTime = targetTime - DateTime.UtcNow;
 
-        if (remainingTime.TotalSeconds <= 0)
+        if (remainingTime.TotalSeconds <= 0 || bonusReady == true)
         {
             bonusReady = true;
             timerText.text = "gift";
