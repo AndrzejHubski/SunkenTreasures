@@ -71,7 +71,6 @@ public class Gem : MonoBehaviour
         // Проверяем столкновение луча с объектами на слое diamondLayer
         if (hit.collider != null)
         {
-            Debug.Log("Hit");
             if(Mathf.Abs(transform.position.y - hit.collider.transform.position.y) > 1)
             {
                 transform.Translate(Vector2.down * 10 * Time.deltaTime);

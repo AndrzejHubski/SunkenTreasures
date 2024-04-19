@@ -8,6 +8,9 @@ public class ChooseGem : MonoBehaviour
     public LayerMask diamondLayer;
 
 
+    public LineRenderer lineRenderer;
+    public List<Transform> points;
+
 
     // Start is called before the first frame update
     void Start()
@@ -35,8 +38,6 @@ public class ChooseGem : MonoBehaviour
                         selectedDiamonds.Add(gemScript);
                     }
                 }
-
-                Debug.Log(GemsDistance(gemScript));
             }
         }
 
@@ -54,6 +55,8 @@ public class ChooseGem : MonoBehaviour
         }
 
         CheckGems();
+
+        DrawLine();
     }
 
     public float GemsDistance(Gem newGem)
@@ -95,5 +98,14 @@ public class ChooseGem : MonoBehaviour
     public void AbortCombo()
     {
         selectedDiamonds.RemoveRange(0, selectedDiamonds.Count);
+    }
+
+    public void DrawLine()
+    {
+        lineRenderer.positionCount = selectedDiamonds.Count;
+        for (int i = 0; i < selectedDiamonds.Count; i++)
+        {
+            lineRenderer.SetPosition(i, selectedDiamonds[i].transform.position);
+        }
     }
 }
