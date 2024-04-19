@@ -41,8 +41,11 @@ public class UIManager : MonoBehaviour
         }
         else
         {
-            mainPanel.gameObject.SetActive(true);
-            mainPanel.Open(null, UIPanelAnimation.None, Ease.Unset);
+            if(mainPanel != null)
+            {
+                mainPanel.gameObject.SetActive(true);
+                mainPanel.Open(null, UIPanelAnimation.None, Ease.Unset);
+            }
         }
         
     }
