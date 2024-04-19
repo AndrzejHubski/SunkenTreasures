@@ -27,14 +27,15 @@ public class MissionController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (PlayerPrefs.GetInt("mapPieces" + 2) >= 16)
-        {
-            gemsTypes = 5;
-        }
-        else if (PlayerPrefs.GetInt("mapPieces" + 3) >= 16)
+        if(PlayerPrefs.GetInt("mapPieces" + 3) >= 16)
         {
             gemsTypes = 6;
         }
+        else if (PlayerPrefs.GetInt("mapPieces" + 2) >= 16)
+        {
+            gemsTypes = 5;
+        }
+        
         else
         {
             gemsTypes = 4;

@@ -20,13 +20,13 @@ public class Gem : MonoBehaviour
     void Start()
     {
         diamondLayer = LayerMask.GetMask("Diamonds");
-        if(PlayerPrefs.GetInt("mapPieces" + 2) >= 16)
-        {
-            gemsRange = 5;
-        }
-        else if(PlayerPrefs.GetInt("mapPieces" + 3) >= 16)
+        if (PlayerPrefs.GetInt("mapPieces" + 3) >= 16)
         {
             gemsRange = 6;
+        }
+        else if(PlayerPrefs.GetInt("mapPieces" + 2) >= 16)
+        {
+            gemsRange = 5;
         }
         else
         {
