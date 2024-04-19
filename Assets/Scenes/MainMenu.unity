@@ -11505,7 +11505,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 503794084063214693, guid: 4a0998a41af90434fbe485a31ac7f185, type: 3}
       propertyPath: m_Name
-      value: CollectPanel (1)
+      value: NewGemPanel2
       objectReference: {fileID: 0}
     - target: {fileID: 503794084063214693, guid: 4a0998a41af90434fbe485a31ac7f185, type: 3}
       propertyPath: m_IsActive
@@ -13553,7 +13553,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 503794084063214693, guid: 4a0998a41af90434fbe485a31ac7f185, type: 3}
       propertyPath: m_Name
-      value: CollectPanel
+      value: NewGemPanel1
       objectReference: {fileID: 0}
     - target: {fileID: 503794084063214693, guid: 4a0998a41af90434fbe485a31ac7f185, type: 3}
       propertyPath: m_IsActive

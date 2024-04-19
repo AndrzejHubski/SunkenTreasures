@@ -1665,7 +1665,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 503794084063214693, guid: 4a0998a41af90434fbe485a31ac7f185, type: 3}
       propertyPath: m_Name
-      value: CollectPanel (1)
+      value: NewGemPanel2
       objectReference: {fileID: 0}
     - target: {fileID: 503794084063214693, guid: 4a0998a41af90434fbe485a31ac7f185, type: 3}
       propertyPath: m_IsActive
@@ -1773,23 +1773,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7947971268667206026, guid: 4a0998a41af90434fbe485a31ac7f185, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7947971268667206026, guid: 4a0998a41af90434fbe485a31ac7f185, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 941462100}
+      objectReference: {fileID: 941462101}
     - target: {fileID: 7947971268667206026, guid: 4a0998a41af90434fbe485a31ac7f185, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7947971268667206026, guid: 4a0998a41af90434fbe485a31ac7f185, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OpenPanel
+      value: ToMenu
       objectReference: {fileID: 0}
     - target: {fileID: 7947971268667206026, guid: 4a0998a41af90434fbe485a31ac7f185, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UIManager, Assembly-CSharp
+      value: ButtonManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 7947971268667206026, guid: 4a0998a41af90434fbe485a31ac7f185, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
@@ -1802,7 +1802,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 503794084063214693, guid: 4a0998a41af90434fbe485a31ac7f185, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 647738087}
+    - targetCorrespondingSourceObject: {fileID: 503794084063214693, guid: 4a0998a41af90434fbe485a31ac7f185, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 647738086}
   m_SourcePrefab: {fileID: 100100000, guid: 4a0998a41af90434fbe485a31ac7f185, type: 3}
 --- !u!1 &647738084 stripped
 GameObject:
@@ -1814,6 +1820,34 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1616628153153249656, guid: 4a0998a41af90434fbe485a31ac7f185, type: 3}
   m_PrefabInstance: {fileID: 647738083}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &647738086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 647738084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b2ce71981157834584f34c2fb45283e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panelName: Gem6
+  animationDuration: 0
+  overrideAnimation: 0
+  overrideEase: 0
+--- !u!225 &647738087
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 647738084}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1001 &762001739
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4450,7 +4484,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 503794084063214693, guid: 4a0998a41af90434fbe485a31ac7f185, type: 3}
       propertyPath: m_Name
-      value: CollectPanel
+      value: NewGemPanel1
       objectReference: {fileID: 0}
     - target: {fileID: 503794084063214693, guid: 4a0998a41af90434fbe485a31ac7f185, type: 3}
       propertyPath: m_IsActive
@@ -4550,23 +4584,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7947971268667206026, guid: 4a0998a41af90434fbe485a31ac7f185, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7947971268667206026, guid: 4a0998a41af90434fbe485a31ac7f185, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 941462100}
+      objectReference: {fileID: 941462101}
     - target: {fileID: 7947971268667206026, guid: 4a0998a41af90434fbe485a31ac7f185, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7947971268667206026, guid: 4a0998a41af90434fbe485a31ac7f185, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OpenPanel
+      value: ToMenu
       objectReference: {fileID: 0}
     - target: {fileID: 7947971268667206026, guid: 4a0998a41af90434fbe485a31ac7f185, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UIManager, Assembly-CSharp
+      value: ButtonManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 7947971268667206026, guid: 4a0998a41af90434fbe485a31ac7f185, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
@@ -4579,7 +4613,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 503794084063214693, guid: 4a0998a41af90434fbe485a31ac7f185, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2023776212}
+    - targetCorrespondingSourceObject: {fileID: 503794084063214693, guid: 4a0998a41af90434fbe485a31ac7f185, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2023776211}
   m_SourcePrefab: {fileID: 100100000, guid: 4a0998a41af90434fbe485a31ac7f185, type: 3}
 --- !u!224 &2023776209 stripped
 RectTransform:
@@ -4591,6 +4631,34 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 503794084063214693, guid: 4a0998a41af90434fbe485a31ac7f185, type: 3}
   m_PrefabInstance: {fileID: 2023776208}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2023776211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2023776210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b2ce71981157834584f34c2fb45283e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panelName: Gem5
+  animationDuration: 0
+  overrideAnimation: 0
+  overrideEase: 0
+--- !u!225 &2023776212
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2023776210}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!4 &2036798075 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 736889520084285574, guid: 25fe8bea5b8f8404abd5e4b2e96cbc8c, type: 3}
