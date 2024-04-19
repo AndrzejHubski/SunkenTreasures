@@ -29,8 +29,7 @@ public class AddGems : MonoBehaviour
         // Проверяем столкновение луча с объектами на слое diamondLayer
         if (hit.collider != null)
         {
-            Debug.Log("Hit");
-            if (Mathf.Abs(transform.position.y - hit.collider.transform.position.y) > 1.2f)
+            if (Mathf.Abs(transform.position.y - hit.collider.transform.position.y) > 1.5f)
             {
                 GameObject gem = Instantiate(gemPrefab, transform.position, transform.rotation, gemParent);
                 gem.GetComponent<Gem>().isSpawned = true;

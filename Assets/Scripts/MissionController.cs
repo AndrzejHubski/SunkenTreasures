@@ -43,7 +43,7 @@ public class MissionController : MonoBehaviour
         for (int i = 0; i < gemsTypes; i++)
         {
             missionGems[i].SetActive(true);
-            gemsCount[i] = Random.Range(3, 9);
+            gemsCount[i] = Random.Range(21, 46);
         }
     }
 
