@@ -1566,6 +1566,7 @@ GameObject:
   - component: {fileID: 217095923}
   - component: {fileID: 217095925}
   - component: {fileID: 217095926}
+  - component: {fileID: 217095927}
   m_Layer: 0
   m_Name: UIManager
   m_TagString: Untagged
@@ -1618,6 +1619,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 0}
+  countdownTimer: {fileID: 0}
 --- !u!114 &217095926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1632,6 +1634,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bermudian: {fileID: 1205165084}
   mexican: {fileID: 1619457007}
+--- !u!114 &217095927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 217095922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f1308b02160e4892bc7d332e73fdb97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerText: {fileID: 690769224}
+  timer: 
+  bonusReady: 0
 --- !u!1 &255029909
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class ButtonManager : MonoBehaviour
 {
     public GameObject pauseMenu;
+    public CountdownTimer countdownTimer;
 
     // Start is called before the first frame update
     void Start()
@@ -26,18 +27,23 @@ public class ButtonManager : MonoBehaviour
 
     public void Gift()
     {
-        for(int i = 0; i < 3; i++)
+        if(countdownTimer.bonusReady == true)
         {
-            if (PlayerPrefs.GetInt("mapPieces" + GameManager.instance.mapId) < 16)
+            for (int i = 0; i < 3; i++)
             {
-                PlayerPrefs.SetInt("mapPieces" + GameManager.instance.mapId, (PlayerPrefs.GetInt("mapPieces" + GameManager.instance.mapId) + 1));
-                int pieceUnlock = Random.Range(0, 17);
-                while (PlayerPrefs.GetInt("map" + GameManager.instance.mapId + "piece" + pieceUnlock) == 1)
+                if (PlayerPrefs.GetInt("mapPieces" + GameManager.instance.mapId) < 16)
                 {
-                    pieceUnlock = Random.Range(0, 17);
+                    PlayerPrefs.SetInt("mapPieces" + GameManager.instance.mapId, (PlayerPrefs.GetInt("mapPieces" + GameManager.instance.mapId) + 1));
+                    int pieceUnlock = Random.Range(0, 17);
+                    while (PlayerPrefs.GetInt("map" + GameManager.instance.mapId + "piece" + pieceUnlock) == 1)
+                    {
+                        pieceUnlock = Random.Range(0, 17);
+                    }
+                    PlayerPrefs.SetInt("map" + GameManager.instance.mapId + "piece" + pieceUnlock, 1);
                 }
-                PlayerPrefs.SetInt("map" + GameManager.instance.mapId + "piece" + pieceUnlock, 1);
             }
+            countdownTimer.bonusReady = false;
+            countdownTimer.ResetTimer();
         }
     }
 
