@@ -29,6 +29,10 @@ public class ShowMapPieces : MonoBehaviour
                 Debug.Log("Load Piece " + i);
                 pieces[i].SetActive(true);
             }
+            else
+            {
+                pieces[i].SetActive(false);
+            }
         }
     }
 }
