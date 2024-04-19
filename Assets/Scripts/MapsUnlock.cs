@@ -16,11 +16,11 @@ public class MapsUnlock : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (PlayerPrefs.GetInt("mapPieces" + 2) >= 16)
+        if (PlayerPrefs.GetInt("mapPieces" + 1) >= 16)
         {
             bermudian.interactable = true;
         }
-        else if (PlayerPrefs.GetInt("mapPieces" + 3) <= 16)
+        else if (PlayerPrefs.GetInt("mapPieces" + 2) >= 16)
         {
             mexican.interactable = true;
         }

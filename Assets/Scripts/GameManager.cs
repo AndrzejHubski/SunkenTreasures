@@ -34,6 +34,12 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        mapId = PlayerPrefs.GetInt("mapId");
+        if (mapId == 0)
+        {
+            mapId = 1;
+        }
+
         Timer();
     }
 

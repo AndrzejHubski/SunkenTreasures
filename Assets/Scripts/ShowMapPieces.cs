@@ -17,14 +17,14 @@ public class ShowMapPieces : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        LoadMapPieces();
     }
 
     public void LoadMapPieces()
     {
         for (int i = 0; i < 16; i++)
         {
-            if (PlayerPrefs.GetInt("map" + mapId + "piece" + i) != 1)
+            if (PlayerPrefs.GetInt("map" + mapId + "piece" + i) == 1)
             {
                 Debug.Log("Load Piece " + i);
                 pieces[i].SetActive(true);

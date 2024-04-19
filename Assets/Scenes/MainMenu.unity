@@ -566,8 +566,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a151145ddaf3c4c86a50a0498b0a25ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  panelGem5: {fileID: 0}
-  panelGem6: {fileID: 0}
+  panelGem5: {fileID: 2142504035}
+  panelGem6: {fileID: 1918881065}
+  uIManager: {fileID: 217095923}
 --- !u!1 &118847441
 GameObject:
   m_ObjectHideFlags: 0
@@ -584,7 +585,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &118847442
 Transform:
   m_ObjectHideFlags: 0
@@ -594,7 +595,7 @@ Transform:
   m_GameObject: {fileID: 118847441}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 81.153854, z: -14607.693}
+  m_LocalPosition: {x: 0, y: 81.153854, z: -48.9}
   m_LocalScale: {x: 44.63462, y: 44.63462, z: 89.26924}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -640,7 +641,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 3a0e32e1783fd417aa0daeec3e79b2c6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -750,7 +751,7 @@ GameObject:
   - component: {fileID: 125824551}
   - component: {fileID: 125824550}
   m_Layer: 5
-  m_Name: TreasureMapPanel (2)
+  m_Name: TreasureMapPanel3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -960,13 +961,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 217095925}
+        m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
+        m_MethodName: BuyPremium
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1564,6 +1565,7 @@ GameObject:
   - component: {fileID: 217095924}
   - component: {fileID: 217095923}
   - component: {fileID: 217095925}
+  - component: {fileID: 217095926}
   m_Layer: 0
   m_Name: UIManager
   m_TagString: Untagged
@@ -1585,8 +1587,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainPanel: {fileID: 1996099374}
   welcomePanel: {fileID: 1253864054}
-  defaultAnimation: 3
-  defaultEase: 28
+  defaultAnimation: 0
+  defaultEase: 0
   _animationIsPlaying: 0
 --- !u!4 &217095924
 Transform:
@@ -1616,6 +1618,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 0}
+--- !u!114 &217095926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 217095922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f0a7a641aca4474bafde3d8b57f8774, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bermudian: {fileID: 1205165084}
+  mexican: {fileID: 1619457007}
 --- !u!1 &255029909
 GameObject:
   m_ObjectHideFlags: 0
@@ -6633,7 +6649,7 @@ GameObject:
   - component: {fileID: 951719311}
   - component: {fileID: 951719310}
   m_Layer: 5
-  m_Name: TreasureMapPanel (1)
+  m_Name: TreasureMapPanel2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7480,6 +7496,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 217095923}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: OpenPanel
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: MainMenu
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1117073463
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8030,21 +8058,21 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 1205165085}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 217095925}
-        m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
-        m_MethodName: SetBermudian
-        m_Mode: 1
+      - m_Target: {fileID: 217095923}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: OpenPanel
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Map2
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1205165085
@@ -8597,7 +8625,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1308866067}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 217095925}
+        m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
+        m_MethodName: Restore
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1308866067
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9116,7 +9156,7 @@ GameObject:
   - component: {fileID: 1400643907}
   - component: {fileID: 1400643909}
   m_Layer: 5
-  m_Name: TreasureMapPanel
+  m_Name: TreasureMapPanel1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9721,6 +9761,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 217095923}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: OpenPanel
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: MainMenu
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1470728511
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10088,6 +10140,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 217095923}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: OpenPanel
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: MainMenu
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1576064306
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10401,21 +10465,21 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 1619457008}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 217095925}
-        m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
-        m_MethodName: SetMexican
-        m_Mode: 1
+      - m_Target: {fileID: 217095923}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: OpenPanel
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Map3
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1619457008
@@ -11542,23 +11606,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7947971268667206026, guid: 4a0998a41af90434fbe485a31ac7f185, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7947971268667206026, guid: 4a0998a41af90434fbe485a31ac7f185, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1918881065}
+      objectReference: {fileID: 217095923}
     - target: {fileID: 7947971268667206026, guid: 4a0998a41af90434fbe485a31ac7f185, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7947971268667206026, guid: 4a0998a41af90434fbe485a31ac7f185, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetActive
+      value: OpenPanel
       objectReference: {fileID: 0}
     - target: {fileID: 7947971268667206026, guid: 4a0998a41af90434fbe485a31ac7f185, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
+      value: UIManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947971268667206026, guid: 4a0998a41af90434fbe485a31ac7f185, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: MainMenu
       objectReference: {fileID: 0}
     - target: {fileID: 7947971268667206026, guid: 4a0998a41af90434fbe485a31ac7f185, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -11567,7 +11635,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 503794084063214693, guid: 4a0998a41af90434fbe485a31ac7f185, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1918881070}
+    - targetCorrespondingSourceObject: {fileID: 503794084063214693, guid: 4a0998a41af90434fbe485a31ac7f185, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1918881069}
   m_SourcePrefab: {fileID: 100100000, guid: 4a0998a41af90434fbe485a31ac7f185, type: 3}
 --- !u!224 &1918881064 stripped
 RectTransform:
@@ -11579,6 +11653,34 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 503794084063214693, guid: 4a0998a41af90434fbe485a31ac7f185, type: 3}
   m_PrefabInstance: {fileID: 1918881063}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1918881069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1918881065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b2ce71981157834584f34c2fb45283e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panelName: Gem6
+  animationDuration: 0
+  overrideAnimation: 0
+  overrideEase: 0
+--- !u!225 &1918881070
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1918881065}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1920992089
 GameObject:
   m_ObjectHideFlags: 0
@@ -11998,16 +12100,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 217095925}
-        m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
-        m_MethodName: SetCaribbean
-        m_Mode: 1
+      - m_Target: {fileID: 217095923}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: OpenPanel
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Map1
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1955988816
@@ -12472,7 +12574,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2006177202
 Transform:
   m_ObjectHideFlags: 0
@@ -12482,7 +12584,7 @@ Transform:
   m_GameObject: {fileID: 2006177201}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 81.153854, z: -14607.693}
+  m_LocalPosition: {x: 0, y: 81.153854, z: -12}
   m_LocalScale: {x: 44.63462, y: 44.63462, z: 89.26924}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -12528,7 +12630,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: fd606b1502a054817adffa258e1425ac, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -13544,23 +13646,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7947971268667206026, guid: 4a0998a41af90434fbe485a31ac7f185, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7947971268667206026, guid: 4a0998a41af90434fbe485a31ac7f185, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 2142504035}
+      objectReference: {fileID: 217095923}
     - target: {fileID: 7947971268667206026, guid: 4a0998a41af90434fbe485a31ac7f185, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7947971268667206026, guid: 4a0998a41af90434fbe485a31ac7f185, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetActive
+      value: OpenPanel
       objectReference: {fileID: 0}
     - target: {fileID: 7947971268667206026, guid: 4a0998a41af90434fbe485a31ac7f185, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
+      value: UIManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947971268667206026, guid: 4a0998a41af90434fbe485a31ac7f185, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: MainMenu
       objectReference: {fileID: 0}
     - target: {fileID: 7947971268667206026, guid: 4a0998a41af90434fbe485a31ac7f185, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -13569,7 +13675,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 503794084063214693, guid: 4a0998a41af90434fbe485a31ac7f185, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2142504040}
+    - targetCorrespondingSourceObject: {fileID: 503794084063214693, guid: 4a0998a41af90434fbe485a31ac7f185, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2142504039}
   m_SourcePrefab: {fileID: 100100000, guid: 4a0998a41af90434fbe485a31ac7f185, type: 3}
 --- !u!224 &2142504034 stripped
 RectTransform:
@@ -13581,6 +13693,34 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 503794084063214693, guid: 4a0998a41af90434fbe485a31ac7f185, type: 3}
   m_PrefabInstance: {fileID: 2142504033}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2142504039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2142504035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b2ce71981157834584f34c2fb45283e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panelName: Gem5
+  animationDuration: 0
+  overrideAnimation: 0
+  overrideEase: 0
+--- !u!225 &2142504040
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2142504035}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

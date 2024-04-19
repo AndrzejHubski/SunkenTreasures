@@ -15,7 +15,7 @@ public class MapInf : MonoBehaviour
         {
             if (piecesText[i].text != null)
             {
-                piecesText[i].text = PlayerPrefs.GetInt("mapPieces" + GameManager.instance.mapId) + "/16".ToString();
+                piecesText[i].text = PlayerPrefs.GetInt("mapPieces" + PlayerPrefs.GetInt("mapId")) + "/16".ToString();
             }
         }
     }
