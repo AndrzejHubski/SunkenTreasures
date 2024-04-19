@@ -34,10 +34,10 @@ public class ButtonManager : MonoBehaviour
                 if (PlayerPrefs.GetInt("mapPieces" + GameManager.instance.mapId) < 16)
                 {
                     PlayerPrefs.SetInt("mapPieces" + GameManager.instance.mapId, (PlayerPrefs.GetInt("mapPieces" + GameManager.instance.mapId) + 1));
-                    int pieceUnlock = Random.Range(0, 17);
+                    int pieceUnlock = Random.Range(0, 16);
                     while (PlayerPrefs.GetInt("map" + GameManager.instance.mapId + "piece" + pieceUnlock) == 1)
                     {
-                        pieceUnlock = Random.Range(0, 17);
+                        pieceUnlock = Random.Range(0, 16);
                     }
                     PlayerPrefs.SetInt("map" + GameManager.instance.mapId + "piece" + pieceUnlock, 1);
                 }
